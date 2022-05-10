@@ -17,7 +17,7 @@ class IndexController extends AbstractController
     public function __index(): Response
     {
         return $this->render('index.html.twig', [
-            'articles' => $this->articleRepository->findBy([], limit: 100),
+            'articles' => $this->articleRepository->findBy([], limit: 10),
         ]);
     }
 }
